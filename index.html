@@ -15,20 +15,46 @@
 	<meta property="og:image" content="og-image.png" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
 	<script src="assets/js/main.js" defer></script>
 </head>
 <body>
 
-
-	<main>
+	<main class="wrapper">
+		<div class="header">
+		<h1>Programming task</h1>
+		<p>Add value to generate a FizzBuzz numbers. Clear and Generate custom numbers.</p>
+		</div>
+		<div class="navbar">
+			<div class="inner__input">
+				<label>MIN number: </label><input type="number" name="field" id="minInput" min="1" max="99" onpaste="return false">
+			</div>
+			<div class="inner__input">
+				<label>MAX number: </label><input type="number" name="field" id="maxInput" min="2" max="100" onpaste="return false">
+			</div>
+			<div class="inner__input">
+			<button id="btn__refresh">Refresh</button>
+			<button id="btn__clear">Clear All</button>
+			</div>
+			<div class="inner__input">
+				<button id="btn__fizz">Fizz</button>
+				<button id="btn__buzz">Buzz</button>
+				<button id="btn__fizzbuzz">FizzBuzz</button>
+			</div>
+		</div>
+		<div id="container">
+		</div>
 	</main>
-	<p>
-		<a href="https://jigsaw.w3.org/css-validator/check/referer">
-			<img style="border:0;width:88px;height:31px"
-			src="https://jigsaw.w3.org/css-validator/images/vcss"
-			alt="Valid CSS!" />
-		</a>
-	</p>
+	<!-- Footer element -->
+	<div class="footer">
+		<p>Project FizzBuzz. ©2019</p><br>
+		<p>
+			<a href="https://jigsaw.w3.org/css-validator/check/referer">
+				<img style="border:0;width:88px;height:31px"
+				src="https://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS!" />
+			</a>
+		</p>
+	</div>
 </body>
 </html>

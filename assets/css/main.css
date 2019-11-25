@@ -1,0 +1,232 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap');
+
+body, html {
+    margin: 0px;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 0.01em;
+    background-color: #fff;
+}
+
+label {
+    padding: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+    padding: 15px 0px 15px 0px;
+}
+
+.header {
+    margin-top: 40px;
+    margin-bottom: 40px; 
+}
+.footer {
+    padding: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center; 
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#container {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 40px;
+    align-content: center;
+}
+
+#container p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.fizbuz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100px;
+    font-size: 16px;
+    border-radius:4px;
+    border: 2px solid #000;
+    background: #eaeaea;
+}
+
+.fiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid #000;
+    background: #fff;
+}
+
+.buz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100px;
+    font-size: 16px;
+    border-radius:4px;
+    border: 2px solid #000;
+    background: black;
+    color: white;
+}
+
+/* NUM class */
+
+.num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    background: #fff;
+    border: 2px solid #000;
+}
+
+.navbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #efefef;
+    padding: 40px 0px 40px 0px;
+}
+
+input {
+    font-size: 16px;
+    border-radius: 3px;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    /*border-color: #fefefe;*/
+    /*border-style: 2px solid;*/
+    position: relative;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.inner__input {
+    padding: 10px;
+    display: block;
+    position: relative;
+}
+
+button {
+    font-size: 16px;
+    border-radius: 50px;
+    width: 160px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin: 15px;
+    border-color: #000;
+    cursor: pointer;
+}
+
+/*Refresh button*/
+#btn__refresh {
+    background-color: black; 
+    color: white;
+    transition: 0.5s;
+    margin-left: 20px;
+}
+
+#btn__refresh:hover {
+    background-color: blue;
+    transition: 0.5s; 
+    border-color: blue;
+}
+
+/*Clear all button*/
+#btn__clear {
+    background-color: black; 
+    color: white;
+    transition: 0.5s;
+}
+
+#btn__clear:hover {
+    background-color: red;
+    transition: 0.5s;
+    border-color: red;
+}
+
+#btn__fizz {
+    background-color: white; 
+    color: black;
+}
+
+#btn__buzz {
+    background-color: white;
+    color: black;
+}
+
+#btn__fizzbuzz {
+    background-color: white;
+    color: black;
+}
+
+.hidden {
+    display: none;
+
+}
+
+@media (max-width: 728px) {
+    .wrapper {
+        margin: 16px;
+    }
+
+    #container {
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+    }
+
+    .navbar {
+        width: 100%;
+        /*min-height: 400px;*/
+        /*flex-wrap: wrap;*/
+        /*flex-direction: column;*/
+    }
+}
+
+@media (max-width: 520px) {
+    .wrapper {
+        margin: 16px;
+    }
+
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0px;
+    }
