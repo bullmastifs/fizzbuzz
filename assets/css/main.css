@@ -1,30 +1,73 @@
-
-
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap');
+
+@font-face {
+  font-family: Whyte;
+  src: url(../fonts/Whyte-Bold.woff2) format("woff2"), url(../fonts/Whyte-Regular.woff2) format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Whyte Regular;
+  src: url(../fonts/Whyte-Regular.woff2) format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
 
 body, html {
     margin: 0px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Whyte Regular', sans-serif;
     letter-spacing: 0.01em;
+    /*background-color: rgb(255 202 0);   //Figma yellow */
     background-color: #fff;
+    font-size: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 label {
     padding: 10px;
 }
 
+.top__heading {
+    font-family: 'Whyte', sans-serif;
+    font-size: 20px;
+    width: 50%;
+    display: block;
+}
+
 h1 {
-    font-size: 40px;
-    font-family: 'Work Sans', sans-serif;
+    font-size: 74px;
+    font-family: 'Whyte', sans-serif;
     letter-spacing: 0.01em;
-    font-weight: 600;
-    padding: 15px 0px 15px 0px;
+    font-weight: 700;
+    line-height: 66px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .header {
-    margin-top: 40px;
-    margin-bottom: 40px; 
+    display: grid;
+    /*grid-template-columns: 1fr;*/
+    width: 50%;
+    grid-gap: 32px;
+    margin-bottom: 80px;
 }
+
+.top__image {
+    margin-top: 20px;
+    margin-bottom: 150px;
+    background-image: url(../../assets/img/code.svg);
+    height: 50px;
+    width: 50px;
+    position: relative;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 100;
+}
+
 .footer {
     padding: 50px;
     margin-right: auto;
@@ -60,10 +103,10 @@ h1 {
     justify-content: center;
     width: 100%;
     min-height: 100px;
-    font-size: 16px;
-    border-radius:4px;
-    border: 2px solid #000;
-    background: #eaeaea;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 3px solid rgb(108 22 255);
+    background-color: rgb(212 186 255);
 }
 
 .fiz {
@@ -72,10 +115,10 @@ h1 {
     justify-content: center;
     width: 100%;
     min-height: 100px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 2px solid #000;
-    background: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 3px solid rgb(108 22 255);
+    background-color: rgb(212 186 255);
 }
 
 .buz {
@@ -84,14 +127,11 @@ h1 {
     justify-content: center;
     width: 100%;
     min-height: 100px;
-    font-size: 16px;
-    border-radius:4px;
-    border: 2px solid #000;
-    background: black;
-    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 3px solid rgb(108 22 255);
+    background-color: rgb(212 186 255);
 }
-
-/* NUM class */
 
 .num {
     display: flex;
@@ -99,11 +139,10 @@ h1 {
     justify-content: center;
     width: 100%;
     min-height: 100px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 2px solid #fff;
-    background: #fff;
-    border: 2px solid #000;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 3px solid rgb(108 22 255);
+    background-color: rgb(212 186 255);
 }
 
 .navbar {
@@ -112,21 +151,21 @@ h1 {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    font-size: 16px;
-    border-radius: 4px;
-    background-color: #efefef;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 3px solid rgb(108 22 255);
+    background-color: rgb(212 186 255);
     padding: 40px 0px 40px 0px;
 }
 
 input {
-    font-size: 16px;
-    border-radius: 3px;
+    font-size: 20px;
+    border-radius: 5px;
     width: 200px;
     padding: 10px;
     margin: 10px;
+    border: 3px solid rgb(108 22 255);
     text-align: center;
-    /*border-color: #fefefe;*/
-    /*border-style: 2px solid;*/
     position: relative;
 }
 
@@ -139,63 +178,64 @@ textarea:focus, input:focus{
 }
 
 .inner__input {
-    padding: 10px;
-    display: block;
+    /*padding: 10px;*/
+    /*display: block;*/
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 button {
+    color: #fff;
+    font-family: "Whyte";
+    display: inline-block;
+    border-radius: 8px;
+    padding: 12px 24px;
     font-size: 16px;
-    border-radius: 50px;
-    width: 160px;
-    padding: 10px;
-    text-align: center;
-    color: white;
+    letter-spacing: 0.03em;
+    font-weight: 300;
+    text-rendering: auto;
+    width: 150px;
+    border: 0;
     margin: 15px;
-    border-color: #000;
     cursor: pointer;
 }
 
-/*Refresh button*/
 #btn__refresh {
-    background-color: black; 
+    background-color: #000;
     color: white;
     transition: 0.5s;
     margin-left: 20px;
 }
 
-#btn__refresh:hover {
-    background-color: blue;
-    transition: 0.5s; 
-    border-color: blue;
-}
-
-/*Clear all button*/
 #btn__clear {
     background-color: black; 
     color: white;
     transition: 0.5s;
 }
 
-#btn__clear:hover {
-    background-color: red;
-    transition: 0.5s;
-    border-color: red;
+#btn__fizz {
+    background-color: rgb(108 22 255); 
+    color: #fff;
+    transition: 100ms;
 }
 
-#btn__fizz {
-    background-color: white; 
-    color: black;
+#btn__fizz:hover {
+    background-color: #4b00cc;
+    transition: 100ms;
+    top: 2px; 
+    color: #fff;
 }
 
 #btn__buzz {
-    background-color: white;
-    color: black;
+    background-color: rgb(108 22 255);
+    color: #fff;
 }
 
 #btn__fizzbuzz {
-    background-color: white;
-    color: black;
+    background-color: rgb(108 22 255);
+    color: #fff;
 }
 
 .hidden {
@@ -204,9 +244,6 @@ button {
 }
 
 @media (max-width: 728px) {
-    .wrapper {
-        margin: 16px;
-    }
 
     #container {
         grid-template-columns: repeat(4, 1fr);
@@ -222,11 +259,18 @@ button {
 }
 
 @media (max-width: 520px) {
-    .wrapper {
-        margin: 16px;
+
+    .header {
+        width: 100%;
+    }
+
+    h1 {
+        /*width: 100%;*/
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
     }
 
     #container {
         grid-template-columns: repeat(2, 1fr);
-        margin: 0px;
     }
