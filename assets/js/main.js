@@ -1,3 +1,4 @@
+console.log('Script started');
 // const btn__clear = document.querySelector('#btn__clear'); // if u don't like getElementById, this is the same function!
 const inputMin = document.querySelector('#minInput');
 const inputMax = document.querySelector('#maxInput');
