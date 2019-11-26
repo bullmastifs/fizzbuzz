@@ -1,134 +1,114 @@
-console.log('Script started');
+console.log('My script started');
 
+function innit () {
+  //  console.log('Adding listeners')
+  addListeners();
+  document.getElementById('elements');
 
-const inputMin = document.querySelector('#minInput');
-const inputMax = document.querySelector('#maxInput');
-const inputFizz = document.querySelector('#fizzInput');
-const inputBuzz = document.querySelector('#buzzInput');
-const main = document.querySelector('#container');
-const btn__clear = document.querySelector('#btn__clear');
-const btn__refresh = document.querySelector('#btn__generate');
-
-
-inputMin.value = 1;
-inputFizz.value = 3;
-inputBuzz.value = 5;
-inputMax.value = 100;
-
-// Creating function that will generate 100 divs.
-const create = function () {
-	console.log("Generate Div")
-	while (main.firstChild) {
-		main.removeChild(main.firstChild);
-	};
-
-// This line creates 100 divs and hides all that do not match input values.
-for (let i = 1; i <= 100; i++) {
-	console.log("Div Added Successfull")
-	let newDiv = document.createElement("div");
-	let newPar = document.createElement("p");
-	newDiv.appendChild(newPar);
-	main.appendChild(newDiv).setAttribute("id", "div_" + i);    // Gives "id" to every div
-	if (i < inputMin.value || i > inputMax.value) {
-		newDiv.style = "display: none";
-	} else {
-		if (i % 3 === 0 && i % 5 === 0) {
-			newPar.appendChild(document.createTextNode(i + ' = FIZZ BUZZ'));
-		main.appendChild(newDiv).setAttribute("class", "fizbuz");// This adds class to divs
-	} else if (i % 3 === 0) {
-		newPar.appendChild(document.createTextNode(i + ' = FIZZ'));
-		main.appendChild(newDiv).setAttribute("class", "fiz");// This adds class to divs
-	} else if (i % 5 === 0) {
-		newPar.appendChild(document.createTextNode(i + ' = BUZZ'));
-		main.appendChild(newDiv).setAttribute("class", "buz");// This adds class to divs
-	} else {
-		newPar.appendChild(document.createTextNode(i));
-		main.appendChild(newDiv).setAttribute("class", "num");// This adds class to divs
-	}
+  var clearButton = document.getElementById('clear');
+  clearButton.addEventListener("click", onClickClear);
+  var submitCustom = document.getElementById('generate2');
+  submitCustom.addEventListener("click", onClickCustom);
 }
+
+function onClick() {
+    onClickClear();
+    console.log('Button press');
+    for(let i = 1; i<101; i++){
+        const element = document.createElement('div');
+        element.className="element" + i;
+        elements.appendChild(element);
+        if (i % 3 ===0 && i % 5 === 0){
+            element.setAttribute("id", "element" +i);
+            element.setAttribute("class", "FizzBuzz");
+            element.innerText="FizzBuzz " + i;
+        }
+        
+        else if (i % 3 === 0 && i % 5 !== 0) {
+            element.setAttribute("id", "element" +i);
+            element.setAttribute("class", "Fizz");
+            element.innerText="Fizz " + i;
+        }
+
+        else if (i % 5 === 0 && i % 3 !== 0){
+            element.setAttribute("id", "element" +i);
+            element.setAttribute("class", "Buzz");
+            element.innerText="Buzz " + i;
+        }
+
+        else if (i % 3 !== 0 && i % 5 !== 0){
+            element.setAttribute("id", "element" +i);
+            element.setAttribute("class", "Empty");
+            element.innerText=i;
+        }
+    }
 }
-};
 
-create();
-
-//This adds event to first INPUT - sets min value.
-
-inputMin.onkeyup = function (e) {
-	console.log("Input MIN OK")
-	this.value = inputMin.value.replace(/^(0*)/, "");
-	if (inputMin.value >= 1 && inputMin.value <= 100) {
-		this.value = inputMin.value;
-	} else if (inputMin.value.length === 0) {
-		inputMin.value = null;
-	} else {
-		inputMin.value = null;
-		alert("Incorrect number. Please add a valid number from 1 till 100");
-	}
-	if (!((e.keyCode > 95 && e.keyCode < 106)
-		|| (e.keyCode > 47 && e.keyCode < 58)
-		|| [8, 13, 37, 39].indexOf(e.keyCode) >= 0
-		)) {
-		return false;
+function onClickClear () {
+    while (elements.firstChild) {
+        elements.removeChild(elements.firstChild);
+    }
+    console.log('Divs cleared');
 }
-create();
-};
 
-// This adds event to second INPUT - sets max value.
+function onClickCustom (){
+    onClickClear();
+    console.log('Divs cleared');
+    console.log('Generate custom divs');
+    var startValue = document.getElementById('startValue').value;
+    var endValue = document.getElementById('endValue').value;   
+    var fizzValue = document.getElementById('fizzValue').value;
+    var buzzValue = document.getElementById('buzzValue').value;
+    // var fizzColor = document.getElementById('fizzColor').value;
+    // var buzzColor = document.getElementById('buzzColor').value;
+    // var fizzBuzzColor = document.getElementById('fizzBuzzColor').value;
+    // var noneColor = document.getElementById('noneColor').value;
+    
+    console.log('start value - ' + startValue);
+    console.log('end value - ' + endValue);
+    console.log('fizz value - ' + fizzValue);
+    console.log('buzz value - ' + buzzValue);
+    // console.log('fizz color - ' + fizzColor);
+    // console.log('buzz color - ' + buzzColor);
+    // console.log('fizzbuzz color - ' + fizzBuzzColor);
+    // console.log('none color - ' + noneColor);
+    
+    for (startValue; startValue<=endValue; startValue++){
+        const element = document.createElement('div');
+        element.id="element" + startValue;
+        elements.appendChild(element);
 
-inputMax.onkeyup = function (e) {
-	console.log("Input MAX OK")
-	this.value = inputMax.value.replace(/^(0*)/, "");
-	if (inputMax.value >= 1 && inputMax.value <= 100) {
-		this.value = inputMax.value;
-	} else if (inputMax.value.length === 0) {
-		inputMax.value = null;
-	} else {
-		inputMax.value = null;
-		alert("Sorry! Incorrect number. Please add a valid number from 1 - 100");
-	}
-	if (!((e.keyCode > 95 && e.keyCode < 106)
-		|| (e.keyCode > 47 && e.keyCode < 58)
-		|| [8, 13, 37, 39].indexOf(e.keyCode) >= 0
-		)) {
-		return false;
+        if (startValue % fizzValue === 0 && startValue % buzzValue === 0){
+            element.setAttribute("id", "element" +startValue);
+            element.setAttribute("class", "FizzBuzz");
+            element.innerText="FizzBuzz " + startValue;
+            // element.style.backgroundColor=fizzBuzzColor;
+
+        }
+
+        else if (startValue % fizzValue === 0 && startValue % buzzValue !== 0){
+            element.setAttribute("id", "element" +startValue);
+            element.setAttribute("class", "Fizz");
+            element.innerText="Fizz " + startValue;
+        }
+
+        else if (startValue % buzzValue === 0 && startValue % fizzValue !== 0){
+            element.setAttribute("id", "element" +startValue);
+            element.setAttribute("class", "Buzz");
+            element.innerText="Buzz " + startValue;
+        }
+
+        else if (startValue % fizzValue !== 0 && startValue % buzzValue !== 0){
+            element.setAttribute("id", "element" +startValue);
+            element.setAttribute("class", "Empty");
+            element.innerText=startValue;
+        }
+    }
 }
-create();
-};
 
-// Button action
+function addListeners() {
+    const submit = document.getElementById('generate');
+    submit.onclick = onClick;
+}
 
-btn__clear.onclick = function() {
-	console.log("Reset Inputs")
-	inputMin.value = "";
-	inputMax.value = "";
-	create();
-};
-
-btn__generate.onclick = function() {
-	console.log("Generating numbers")
-	inputMin.value = 1;
-	inputMax.value = 100;
-	create();
-};
-
-// JQuery. Selecting divs to class //
-$(document).ready(function() {
-	$("#btn__fizz").click(function() {
-		console.log("Button Fizz OK")
-		$(".num, .buz, .fizbuz").toggle();
-	});
-});
-
-$(document).ready(function() {
-	$("#btn__buzz").click(function() {
-		console.log("Button Buzz OK")
-		$(".num, .fiz, .fizbuz").toggle();
-	});
-});
-
-$(document).ready(function() {
-	$("#btn__fizzbuzz").click(function() {
-		console.log("Button FizzBuzz OK")
-		$(".num, .buz, .fiz").toggle();
-	});
-});
+innit();
