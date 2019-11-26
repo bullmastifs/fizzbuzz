@@ -25,16 +25,6 @@ body, html {
     padding-right: 16px;
 }
 
-h1 {
-    font-size: 74px;
-    font-family: 'Whyte', sans-serif;
-    letter-spacing: 0.01em;
-    font-weight: 700;
-    line-height: 66px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
 .wrapper {
     max-width: 1100px;
     margin-left: auto;
@@ -43,7 +33,6 @@ h1 {
 
 .header {
     display: grid;
-    /*grid-template-columns: 1fr;*/
     width: 50%;
     grid-gap: 32px;
     margin-bottom: 80px;
@@ -61,6 +50,16 @@ h1 {
     background-position: center;
     background-size: cover;
     z-index: 100;
+}
+
+h1 {
+    font-size: 74px;
+    font-family: 'Whyte', sans-serif;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+    line-height: 66px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 label {
@@ -250,6 +249,10 @@ button {
 }
 
 @media (max-width: 728px) {
+    
+    .top__image{
+        margin-bottom: 100px;
+    }
 
     .header {
         width: 100%;
@@ -273,6 +276,10 @@ button {
 }
 
 @media (max-width: 520px) {
+
+    .top__image{
+        margin-bottom: 100px;
+    }
 
     .header {
         width: 100%;
