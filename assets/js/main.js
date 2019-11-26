@@ -16,12 +16,14 @@ inputMax.value = 100;
 
 // Creating function that will generate 100 divs.
 const create = function () {
+	console.log("Generate Div")
 	while (main.firstChild) {
 		main.removeChild(main.firstChild);
 	};
 
 // This line creates 100 divs and hides all that do not match input values.
 for (let i = 1; i <= 100; i++) {
+	console.log("Div Added Successfull")
 	let newDiv = document.createElement("div");
 	let newPar = document.createElement("p");
 	newDiv.appendChild(newPar);
@@ -51,6 +53,7 @@ create();
 //This adds event to first INPUT - sets min value.
 
 inputMin.onkeyup = function (e) {
+	console.log("Input MIN OK")
 	this.value = inputMin.value.replace(/^(0*)/, "");
 	if (inputMin.value >= 1 && inputMin.value <= 100) {
 		this.value = inputMin.value;
@@ -72,6 +75,7 @@ create();
 // This adds event to second INPUT - sets max value.
 
 inputMax.onkeyup = function (e) {
+	console.log("Input MAX OK")
 	this.value = inputMax.value.replace(/^(0*)/, "");
 	if (inputMax.value >= 1 && inputMax.value <= 100) {
 		this.value = inputMax.value;
@@ -93,12 +97,14 @@ create();
 // Button action
 
 btn__clear.onclick = function() {
+	console.log("Clear Function")
 	inputMin.value = "";
 	inputMax.value = "";
 	create();
 };
 
 btn__refresh.onclick = function() {
+	console.log("Refresh Function")
 	inputMin.value = 1;
 	inputMax.value = 100;
 	create();
@@ -107,18 +113,21 @@ btn__refresh.onclick = function() {
 // JQuery. Selecting divs to class //
 $(document).ready(function() {
 	$("#btn__fizz").click(function() {
+		console.log("Button Fizz OK")
 		$(".num, .buz, .fizbuz").toggle();
 	});
 });
 
 $(document).ready(function() {
 	$("#btn__buzz").click(function() {
+		console.log("Button Buzz OK")
 		$(".num, .fiz, .fizbuz").toggle();
 	});
 });
 
 $(document).ready(function() {
 	$("#btn__fizzbuzz").click(function() {
+		console.log("Button FizzBuzz OK")
 		$(".num, .buz, .fiz").toggle();
 	});
 });

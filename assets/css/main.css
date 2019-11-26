@@ -251,9 +251,20 @@ button {
 
 @media (max-width: 728px) {
 
+    .header {
+        width: 100%;
+    }
+
     #container {
         grid-template-columns: repeat(4, 1fr);
         justify-content: center;
+    }
+
+    h1 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+        display: inline-block;
     }
 
     .navbar {
@@ -271,6 +282,7 @@ button {
         overflow-wrap: break-word;
         word-wrap: break-word;
         hyphens: auto;
+        display: inline-block;
     }
 
     #container {
