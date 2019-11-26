@@ -35,7 +35,7 @@ body, html {
     display: grid;
     width: 50%;
     grid-gap: 32px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .top__image {
@@ -64,6 +64,12 @@ h1 {
 
 label {
     padding: 10px;
+    text-align: left;
+}
+
+.button__block {
+    text-align: center;
+    width: 100%;
 }
 
 .footer {
@@ -73,8 +79,8 @@ label {
     text-align: center; 
 }
 
-#container {
-    margin-top: 20px;
+#elements {
+    margin-top: 40px;
     width: 100%;
     height: auto;
     display: grid;
@@ -83,13 +89,13 @@ label {
     align-content: center;
 }
 
-#container p {
+#elements p {
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-.fizbuz {
+.FizzBuzz {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +107,7 @@ label {
     background-color: rgb(108, 22, 255);
 }
 
-.fiz {
+.Fizz {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +119,7 @@ label {
     background-color: rgb(108, 22, 255);
 }
 
-.buz {
+.Buzz {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +132,7 @@ label {
     /*background-color: rgb(212, 186, 255);*/
 }
 
-.num {
+.Empty {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,11 +146,10 @@ label {
 
 .navbar {
     width: 100%;
-    height: auto;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
-    font-size: 18px;
+    justify-content: center;
+    font-size: 16px;
     border-radius: 8px;
     border: 3px solid rgb(108, 22, 255);
     background-color: rgb(212, 186, 255);
@@ -152,9 +157,9 @@ label {
 }
 
 input {
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 5px;
-    width: 200px;
+    width: 150px;
     padding: 10px;
     margin: 10px;
     border: 3px solid rgb(108, 22, 255);
@@ -170,15 +175,6 @@ textarea:focus, input:focus{
     outline: none;
 }
 
-.inner__input {
-    /*padding: 10px;*/
-    /*display: block;*/
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 button {
     color: #fff;
     font-family: "Whyte";
@@ -188,65 +184,20 @@ button {
     font-size: 16px;
     letter-spacing: 0.03em;
     font-weight: 300;
-    text-rendering: auto;
-    width: 150px;
+    width: auto;
     border: 0;
     margin: 15px;
     cursor: pointer;
 }
 
-#btn__refresh {
+#generate, #generate2 {
     background-color: #000;
     color: #fff;
-    margin-left: 20px;
 }
 
-#btn__clear {
+#clear {
     background-color: #000; 
     color: #fff;
-}
-
-#btn__fizz {
-    background-color: rgb(108, 22, 255); 
-    color: #fff;
-    transition: 500ms;
-}
-
-#btn__fizz:hover {
-    background-color: #4b00cc;
-    transition: 500ms;
-    top: 2px; 
-    color: #fff;
-}
-
-#btn__buzz {
-    background-color: rgb(108, 22, 255);
-    color: #fff;
-    transition: 500ms;
-}
-
-#btn__buzz:hover {
-    background-color: #4b00cc;
-    transition: 500ms;
-    color: #fff;
-}
-
-#btn__fizzbuzz {
-    background-color: rgb(108, 22, 255);
-    color: #fff;
-    transition: 500ms;
-}
-
-#btn__fizzbuzz:hover {
-    background-color: #4b00cc;
-    transition: 500ms;
-    top: 2px; 
-    color: #fff;
-}
-
-.hidden {
-    display: none;
-
 }
 
 @media (max-width: 900px) {
@@ -259,7 +210,7 @@ button {
         width: 100%;
     }
 
-    #container {
+    #elements {
         grid-template-columns: repeat(4, 1fr);
         justify-content: center;
     }
@@ -293,6 +244,6 @@ button {
         display: inline-block;
     }
 
-    #container {
+    #elements {
         grid-template-columns: repeat(2, 1fr);
     }

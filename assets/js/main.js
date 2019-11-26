@@ -1,14 +1,15 @@
 console.log('Script started');
-// const btn__clear = document.querySelector('#btn__clear'); // if u don't like getElementById, this is the same function!
+
+
 const inputMin = document.querySelector('#minInput');
 const inputMax = document.querySelector('#maxInput');
 const inputFizz = document.querySelector('#fizzInput');
 const inputBuzz = document.querySelector('#buzzInput');
 const main = document.querySelector('#container');
 const btn__clear = document.querySelector('#btn__clear');
-const btn__refresh = document.querySelector('#btn__refresh');
+const btn__refresh = document.querySelector('#btn__generate');
 
-// Starting value on refresh
+
 inputMin.value = 1;
 inputFizz.value = 3;
 inputBuzz.value = 5;
@@ -46,7 +47,7 @@ for (let i = 1; i <= 100; i++) {
 	}
 }
 }
-};    
+};
 
 create();
 
@@ -97,14 +98,14 @@ create();
 // Button action
 
 btn__clear.onclick = function() {
-	console.log("Clear Function")
+	console.log("Reset Inputs")
 	inputMin.value = "";
 	inputMax.value = "";
 	create();
 };
 
-btn__refresh.onclick = function() {
-	console.log("Refresh Function")
+btn__generate.onclick = function() {
+	console.log("Generating numbers")
 	inputMin.value = 1;
 	inputMax.value = 100;
 	create();
