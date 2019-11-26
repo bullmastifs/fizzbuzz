@@ -2,12 +2,16 @@ console.log('Script started');
 // const btn__clear = document.querySelector('#btn__clear'); // if u don't like getElementById, this is the same function!
 const inputMin = document.querySelector('#minInput');
 const inputMax = document.querySelector('#maxInput');
+const inputFizz = document.querySelector('#fizzInput');
+const inputBuzz = document.querySelector('#buzzInput');
 const main = document.querySelector('#container');
 const btn__clear = document.querySelector('#btn__clear');
 const btn__refresh = document.querySelector('#btn__refresh');
 
 // Starting value on refresh
 inputMin.value = 1;
+inputFizz.value = 3;
+inputBuzz.value = 5;
 inputMax.value = 100;
 
 // Creating function that will generate 100 divs.
