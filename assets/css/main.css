@@ -248,7 +248,7 @@ button {
 
 }
 
-@media (max-width: 728px) {
+@media (max-width: 900px) {
     
     .top__image{
         margin-bottom: 100px;
