@@ -1,5 +1,11 @@
 console.log('My script started');
 
+//start values
+startValue.value = 1;
+endValue.value = 100;
+fizzValue.value = 3;
+buzzValue.value = 5;
+
 function innit () {
   //  console.log('Adding listeners')
   addListeners();
@@ -20,25 +26,25 @@ function onClick() {
         elements.appendChild(element);
         if (i % 3 ===0 && i % 5 === 0){
             element.setAttribute("id", "element" +i);
-            element.setAttribute("class", "FizzBuzz");
+            element.setAttribute("class", "fizzBuzz");
             element.innerText="FizzBuzz " + i;
         }
         
         else if (i % 3 === 0 && i % 5 !== 0) {
             element.setAttribute("id", "element" +i);
-            element.setAttribute("class", "Fizz");
+            element.setAttribute("class", "fizz");
             element.innerText="Fizz " + i;
         }
 
         else if (i % 5 === 0 && i % 3 !== 0){
             element.setAttribute("id", "element" +i);
-            element.setAttribute("class", "Buzz");
+            element.setAttribute("class", "buzz");
             element.innerText="Buzz " + i;
         }
 
         else if (i % 3 !== 0 && i % 5 !== 0){
             element.setAttribute("id", "element" +i);
-            element.setAttribute("class", "Empty");
+            element.setAttribute("class", "empty");
             element.innerText=i;
         }
     }
@@ -80,27 +86,26 @@ function onClickCustom (){
 
         if (startValue % fizzValue === 0 && startValue % buzzValue === 0){
             element.setAttribute("id", "element" +startValue);
-            element.setAttribute("class", "FizzBuzz");
+            element.setAttribute("class", "fizzBuzz");
             element.innerText="FizzBuzz " + startValue;
             // element.style.backgroundColor=fizzBuzzColor;
-
         }
 
         else if (startValue % fizzValue === 0 && startValue % buzzValue !== 0){
             element.setAttribute("id", "element" +startValue);
-            element.setAttribute("class", "Fizz");
+            element.setAttribute("class", "fizz");
             element.innerText="Fizz " + startValue;
         }
 
         else if (startValue % buzzValue === 0 && startValue % fizzValue !== 0){
             element.setAttribute("id", "element" +startValue);
-            element.setAttribute("class", "Buzz");
+            element.setAttribute("class", "buzz");
             element.innerText="Buzz " + startValue;
         }
 
         else if (startValue % fizzValue !== 0 && startValue % buzzValue !== 0){
             element.setAttribute("id", "element" +startValue);
-            element.setAttribute("class", "Empty");
+            element.setAttribute("class", "empty");
             element.innerText=startValue;
         }
     }
