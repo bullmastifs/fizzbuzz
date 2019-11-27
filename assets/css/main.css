@@ -31,14 +31,20 @@ body, html {
 
 .header {
     display: grid;
-    width: 50%;
-    grid-gap: 32px;
+    width: 70%;
+    grid-gap: 20px;
     margin-bottom: 60px;
+}
+
+.scroll__down {
+    color: rgb(108, 22, 255);
+    text-decoration: underline;
+    transition: 1s;
 }
 
 .top__image {
     margin-top: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     background-image: url(../../assets/img/code.svg);
     height: 50px;
     width: 50px;
@@ -51,7 +57,7 @@ body, html {
 }
 
 h1 {
-    font-size: 74px;
+    font-size: 50px;
     font-family: 'Whyte', sans-serif;
     letter-spacing: 0.01em;
     font-weight: 700;
@@ -151,6 +157,7 @@ label {
     border-radius: 8px;
     border: 3px solid rgb(108, 22, 255);
     background-color: rgb(212, 186, 255);
+    /*background-color: #fff;*/
     padding: 40px 0px 40px 0px;
 }
 

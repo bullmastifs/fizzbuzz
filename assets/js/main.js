@@ -1,5 +1,20 @@
 console.log('My script started');
 
+//jquery smooth animation
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 400, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+
 //start values
 startValue.value = 1;
 endValue.value = 100;
