@@ -15,31 +15,29 @@
 	<meta property="og:image" content="og-image.png" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
 	<script src="assets/js/main.js" defer></script>
 </head>
 <body>
 
 	<main class="wrapper">
-		<div class="top__image"></div>
+		<div class="top__image" onclick="refreshPage()"></div>
 		<div class="header">
-			<div class="top__heading">My first</div>
-			<h1>FizzBuzz project</h1>
-			<p>Add value to generate a FizzBuzz numbers. Refresh and Generate custom values. <a class="scroll__down" href="#value__boxes">Scroll down to learn more</a></p>
+			<h1>Fizzbuzz.</h1>
+			<p>Add values to generate a FizzBuzz numbers.<br>Refresh and Generate custom values.</p>
 		</div>
 		<div class="navbar">
 			<!-- <div id="colorBox">
             <label>None color :</label><input id="noneColor" type="color" value="#3292ff">
         </div> -->
 			<div id="value__boxes">
-			<label>Start value: </label><input type="number" id="startValue" value="1"></div>
-			<div><label>End value: </label><input type="number" id="endValue" value="100"></div>
-			<div><label>Fizz value: </label><input type="number" id="fizzValue" value="3"></div>
-			<div><label>Buzz value: </label><input type="number" id="buzzValue" value="5"></div>
+			<label>Start value: </label><br><input type="number" id="startValue" value="1"></div>
+			<div><label>End value: </label><br><input type="number" id="endValue" value="100"></div>
+			<div><label>Fizz value: </label><br><input type="number" id="fizzValue" value="3"></div>
+			<div><label>Buzz value: </label><br><input type="number" id="buzzValue" value="5"></div>
 			<div class="button__block">
-				<button type="submit" id="generate">Generate Default</button>
-				<button type="submit" id="clear">Clear Div</button>
-				<button type="submit" id="generate2">Generate custom</button>
+				<button type="submit" id="generate">Generate</button>
+				<button type="submit" id="reset">Reset</button>
+				<button type="submit" id="generate__custom">Create custom</button>
 			</div>
 		</div>
 			<!-- <div class="inner__input">
